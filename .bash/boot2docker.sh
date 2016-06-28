@@ -12,8 +12,7 @@
 
 # Run a basic Ubuntu test container
 function ubuntu() {
-    local ubuntu_volumes='-v /Users/ghicks/Stash:/Stash'
-    ubuntu_volumes="$ubuntu_volumes -v /Users/ghicks/GitHub:/GitHub"
+    local ubuntu_volumes='-v /Users/ghicks/git:/git'
     ubuntu_volumes="$ubuntu_volumes -v /Users/ghicks/.aws:/root/.aws"
     # [[ $(b2d status) != "running" ]] && b2d up && eval "$(b2d shellinit)"
     docker rm -fv ubuntu-testbed
@@ -23,8 +22,7 @@ function ubuntu() {
 
 
 function ubuntu-pypi() {
-    local ubuntu_volumes='-v /Users/ghicks/Stash:/Stash'
-    ubuntu_volumes="$ubuntu_volumes -v /Users/ghicks/GitHub:/GitHub"
+    local ubuntu_volumes='-v /Users/ghicks/git:/git'
     ubuntu_volumes="$ubuntu_volumes -v /Users/ghicks/.aws:/root/.aws"
     # [[ $(b2d status) != "running" ]] && b2d up && eval "$(b2d shellinit)"
     docker rm -fv ubuntu-testbed

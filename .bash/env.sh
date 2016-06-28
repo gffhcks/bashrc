@@ -14,6 +14,9 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 export GREP_OPTIONS='--color=auto'
 
 # EOPS puppet tools
-export PATH=$PATH:$HOME/Stash/eops-tools/puppet
+export PATH=$PATH:$HOME/git/eops-tools/puppet
 # Personal tools
 export PATH=$PATH:$HOME/bin
+
+# Load private-file
+[[ -s "$HOME/.bash/.private" ]] && source $HOME/.bash/.private
