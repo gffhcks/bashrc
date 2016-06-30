@@ -1,7 +1,12 @@
 #!/bin/bash
 
+
+
 # NOTE: For mas to work with free App Store apps, you MUST do this:
 # Go to System Preferences/App Store, select 'Save Password' for Free Downloads.
+
+# To run:
+# curl https://raw.githubusercontent.com/gffhcks/dotfiles/master/bin/bootstrap_osx.sh > $HOME/bootstrap_osx.sh && chmod +x $HOME/bootstrap_osx.sh && $HOME/bootstrap_osx.sh
 
 # NOTE: The current version of 'mas' in homebrew does not prompt for passwords.
 read -p "Mac App Store username: " masuser
@@ -125,15 +130,15 @@ mkdir -p ~/GitHub
 # Consider using 'mas list' to check if something is installed first.
 # echo -e "${RED}Installing apps from the App Store${NC}"
 # mas signin $masuser $maspass
-# mas install 406056744 # Evernote
-# mas install 784801555 # Microsoft OneNote
-# mas install 823766827 # OneDrive
-# mas install 568494494 # Pocket
-# mas install 425955336 # Skitch - Snap. Mark up. Share.
-# mas install 803453959 # Slack
-# mas install 425424353 # The Unarchiver
-# mas install 410628904 # Wunderlist: To-Do List & Tasks
-# mas install 497799835 # Xcode
+mas install 406056744 # Evernote
+mas install 784801555 # Microsoft OneNote
+mas install 823766827 # OneDrive
+mas install 568494494 # Pocket
+mas install 425955336 # Skitch - Snap. Mark up. Share.
+mas install 803453959 # Slack
+mas install 425424353 # The Unarchiver
+mas install 410628904 # Wunderlist: To-Do List & Tasks
+mas install 497799835 # Xcode
 
 # Accept Xcode license
 sudo xcodebuild -license
